@@ -21,7 +21,7 @@ target/
 /mvnw.cmd
 /mvnw
 /.mvn/*
-.gitignore
+/.gitignore
 
 ### NetBeans ###
 /nbproject/private/
