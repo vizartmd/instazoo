@@ -6,11 +6,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.core.Authentication;
+import org.springframework.stereotype.Component;
 
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+@Component
 public class JWTTokenProvider {
 
     public static final Logger LOG = LoggerFactory.getLogger(JWTTokenProvider.class);
@@ -25,7 +27,7 @@ public class JWTTokenProvider {
         Map<String, Object> climesMap = new HashMap<>();
         climesMap.put("id", userId);
         climesMap.put("username", user.getEmail());
-        climesMap.put("firstname", user.getName());
+        climesMap.put("firstname", user.getFirstname());
         climesMap.put("lastname", user.getLastname());
 
 
